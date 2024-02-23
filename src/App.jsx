@@ -12,8 +12,8 @@ export const App = () => {
   return (
     <>
       <h1 style={{ color: "red" }}>Hello, World!</h1>
-      <ColorfulMessage color="skyblue" message="How are you?"/>
-      <ColorfulMessage color="green" message="I'm fine."/>
+      <ColorfulMessage color="skyblue">How are you?</ColorfulMessage> 
+      <ColorfulMessage color="green">I'm fine.</ColorfulMessage>
       <button onClick={onClickButton}>Button</button>
     </>
   );
