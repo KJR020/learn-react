@@ -1,8 +1,8 @@
 export const ColorfulMessage = (props) => {
     console.log(props )
     const contentStyleA = {
-        color: props.color,
-        fonssize: "18px"
+        color,
+        fontSize: "18px"
     }
 
     return (
