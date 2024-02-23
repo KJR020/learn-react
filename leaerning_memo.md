@@ -36,3 +36,22 @@ reactのsyntaxの強制
 OK: App   
 NG: app  
 
+
+# TIPSなど
+
+## 1. Propsの書き方
+関数コンポーネントでオブジェクト形式のpropsを受け取、そのプロパティを頻繁に使用する場合、  
+でストラクチャリング（分割代入）を活用すると良い。  
+コードがスッキリし、可読性が向上する。
+
+```javascript
+export const ColorfulMessage = (props) => {
+  const { color, children } = props;
+  const contentStyleA = {
+    color: color,
+    fontSize:  "18px"
+  }
+  
+  return <p style={contentStyleA}>{children}</p>
+};
+```
