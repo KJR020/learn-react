@@ -66,4 +66,45 @@ useEffect はフックであるため、コンポーネントのトップレベ�
 ループや条件文の中で呼び出すことはできません。これが必要な場合は、新しいコンポーネントを抽出し、その中に state を移動させてください。
 
 - 基本的には多用するものではないらしい。
-- 
+
+
+## named export vs default export
+import した時に、自由に名前を付けられる
+default exportはひとつのファイルで一つの
+
+## Named Export 
+- 複数の値をエクスポートできる
+- exportとimportで名前を一致させる必要がある
+- {}を使用してインポートする
+
+```JavaScript
+export const num = 1;
+export function printNum() {
+  console.log(num);
+}
+```
+
+```JavaScript
+import {num, printNum} from './module.js';
+```
+
+## Default Export 
+- ファイルごとに１つ値のみをエクスポートする
+- exportとimportで名前を一致させる必要がない
+- {}を使用せずインポートする
+
+
+```JavaScript
+const myFunction = () => {
+  console.log("Hello!");
+};
+export default myFunction
+```
+
+```JavaScript
+import anyNameYouLike from './module.js';
+
+anyNameYouLike();
+```
+
+
