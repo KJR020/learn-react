@@ -55,3 +55,6 @@ export const ColorfulMessage = (props) => {
   return <p style={contentStyleA}>{children}</p>
 };
 ```
+
+## 2. 再レンダリング
+ReactはdevモードかつStrictModeだと、2回レンダリングするらしい
