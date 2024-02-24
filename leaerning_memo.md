@@ -58,3 +58,12 @@ export const ColorfulMessage = (props) => {
 
 ## 2. 再レンダリング
 ReactはdevモードかつStrictModeだと、2回レンダリングするらしい
+
+## useEffect
+useEffect(setup, dependencies?) 
+[Document](https://ja.react.dev/reference/react/useEffect)
+useEffect はフックであるため、コンポーネントのトップレベルやカスタムフック内でのみ呼び出すことができます。  
+ループや条件文の中で呼び出すことはできません。これが必要な場合は、新しいコンポーネントを抽出し、その中に state を移動させてください。
+
+- 基本的には多用するものではないらしい。
+- 
