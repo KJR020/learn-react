@@ -3,9 +3,13 @@ import { ColorfulMessage } from "./components/ColorfulMessage";
 
 export const App = () => {
   const [num, setNum] = useState(0);
+  const [isShowFace, setIsShowFace] = useState(true);
   const onClickCountUp = () => {
     setNum((prev) => prev + 1);
     setNum((prev) => prev + 1);
+  };
+  const onClickToggle = () => {
+    setIsShowFace(!isShowFace);
   };
   const contentStyle = {
     color: "blue",
@@ -19,6 +23,8 @@ export const App = () => {
       <ColorfulMessage color="green">I'm fine.</ColorfulMessage>
       <button onClick={onClickCountUp}>Count Up Button</button>
       <p>{num}</p>
+      <button onClick={onClickToggle}>on/off</button>
+      {isShowFace && <p>:)</p>}
     </>
   );
 };
